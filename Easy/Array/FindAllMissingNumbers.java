@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class FindMissingNumber {
+public class FindAllMissingNumbers {
     private static List<Integer> findDisappearedNumbers(int[] nums) {
         for (int i=0;i<nums.length;i++) {
             int val = Math.abs(nums[i])-1;

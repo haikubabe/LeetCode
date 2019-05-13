@@ -1,4 +1,4 @@
-public class MissingNumber {
+public class FindMissingNumber {
     private static int missingNumber(int[] nums) {
         boolean[] present = new boolean[nums.length+1];
         for (int num : nums) {

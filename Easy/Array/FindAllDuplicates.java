@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class FindDuplicates {
+public class FindAllDuplicates {
     private static List<Integer> findDuplicates(int[] nums) {
         List<Integer> res = new ArrayList<>();
         for (int i=0;i<nums.length;i++) {

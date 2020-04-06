@@ -1,3 +1,5 @@
+package Array.Easy;
+
 import java.util.ArrayList;
 import java.util.List;
 

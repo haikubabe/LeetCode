@@ -1,4 +1,4 @@
-package thirty_day_challenge;
+package exercises;
 
 /**
  * Leetcode - #121

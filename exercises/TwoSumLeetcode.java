@@ -28,7 +28,7 @@ public class TwoSumLeetcode
      * @param target
      * @return
      */
-    private static int[] twoSum(int[] nums, int target) {
+    private static int[] twoSum1st(int[] nums, int target) {
         int[] res = new int[2];
         int[] arr = Arrays.copyOf(nums, nums.length);
         Arrays.sort(arr);
@@ -57,7 +57,7 @@ public class TwoSumLeetcode
      * @param target
      * @return
      */
-    private static int[] twoSum1st(int[] nums, int target) {
+    private static int[] twoSum(int[] nums, int target) {
         Map<Integer,Integer> map = new HashMap<>();
         for (int i=0;i<nums.length;i++) {
             int x = nums[i];

@@ -1,3 +1,5 @@
+package Trees;
+
 public class RangeSumBST {
     private static int rangeSumBST(TreeNode root, int L, int R) {
         int sum=0;

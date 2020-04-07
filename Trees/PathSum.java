@@ -1,3 +1,5 @@
+package Trees;
+
 public class PathSum {
 
     private static int pathHasSum(TreeNode root, int sum, int current) {

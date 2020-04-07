@@ -1,3 +1,5 @@
+package Trees;
+
 public class DiameterOfBinaryTree {
     private static int diameterOfBinaryTree(TreeNode root) {
         if (root == null) {

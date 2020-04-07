@@ -1,3 +1,5 @@
+package Trees;
+
 public class MaximumDepth {
     private static int maxDepth(TreeNode root) {
         if (root == null) return 0;

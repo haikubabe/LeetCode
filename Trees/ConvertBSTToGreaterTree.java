@@ -1,3 +1,5 @@
+package Trees;
+
 public class ConvertBSTToGreaterTree {
     static int sum=0;
     private static TreeNode convertBST(TreeNode root) {

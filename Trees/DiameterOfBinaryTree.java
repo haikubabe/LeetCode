@@ -23,6 +23,7 @@ public class DiameterOfBinaryTree {
         treeNode.right = new TreeNode(20);
         treeNode.right.left = new TreeNode(15);
         treeNode.right.right = new TreeNode(7);
+        System.out.println(height(treeNode));
         System.out.println(diameterOfBinaryTree(treeNode));
     }
 }

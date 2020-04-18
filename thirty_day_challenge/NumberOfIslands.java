@@ -60,8 +60,8 @@ public class NumberOfIslands
                 }
             }
             if (n_i<grid.length-1) {
-                char bottom = grid[n_i+1][n_j];
-                if (bottom == '1' && !explored[n_i+1][n_j]) {
+                char down = grid[n_i+1][n_j];
+                if (down == '1' && !explored[n_i+1][n_j]) {
                     explored[n_i+1][n_j] = true;
                     queue.offer(new Pair<>(n_i+1,n_j));
                 }
@@ -71,8 +71,12 @@ public class NumberOfIslands
 
     public static void main(String[] args)
     {
-        char[][] grid = {};
-
+        char[][] grid = {
+                {'1','0','0','0','1'},
+                {'0','0','0','0','0'},
+                {'0','0','0','0','0'},
+                {'1','0','0','0','1'}
+        };
         System.out.println(numIslands(grid));
     }
 }

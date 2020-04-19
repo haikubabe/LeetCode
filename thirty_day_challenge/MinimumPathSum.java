@@ -103,7 +103,7 @@ public class MinimumPathSum
                 {4,2,1}
         };
         System.out.println(minPathSum(grid));
-//        System.out.println(minPath(grid));
+        System.out.println(minPath(grid));
         System.out.println("Printing mark array");
         for (int i=0;i<mark.length;i++) {
             for (int j=0;j<mark[0].length;j++) {

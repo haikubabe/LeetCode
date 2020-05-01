@@ -1,4 +1,4 @@
-package thirty_day_challenge;
+package thirty_day_challenge.April;
 
 public class BitwiseAnd {
 

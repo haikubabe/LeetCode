@@ -21,6 +21,18 @@ public class FirstBad
         return left;
     }
 
+    private static int binarySearch(int low, int high) {
+        int mid = low + (high-low)/2;
+        boolean isMidBad = isBadVersion(mid);
+        if(low == mid && isMidBad) {
+            return low;
+        }
+        if (isMidBad) {
+            return binarySearch(low,mid);
+        }
+        return binarySearch(mid+1,high);
+    }
+    
     public static void main(String[] args)
     {
         int n = 5;

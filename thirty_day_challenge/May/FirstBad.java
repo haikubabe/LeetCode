@@ -11,7 +11,7 @@ public class FirstBad
         return VERSION == version;
     }
 
-    public static int firstBadVersion(int n) {
+    /*public static int firstBadVersion(int n) {
         int left = 1, right = n;
         while (left < right) {
             int mid = left + (right-left)/2;
@@ -22,7 +22,7 @@ public class FirstBad
             }
         }
         return left;
-    }
+    }*/
 
     private static int binarySearch(int low, int high) {
         int mid = low + (high-low)/2;
@@ -34,6 +34,10 @@ public class FirstBad
             return binarySearch(low,mid);
         }
         return binarySearch(mid+1,high);
+    }
+
+    public static int firstBadVersion(int n) {
+        return binarySearch(1,n);
     }
 
     public static void main(String[] args)

@@ -32,7 +32,7 @@ public class FirstBad
         }
         return binarySearch(mid+1,high);
     }
-    
+
     public static void main(String[] args)
     {
         int n = 5;

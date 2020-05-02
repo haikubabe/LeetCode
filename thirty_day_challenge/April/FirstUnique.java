@@ -4,24 +4,29 @@ import java.util.*;
 
 public class FirstUnique
 {
-    private static Set<Integer> set = new HashSet<>();
+    private static Map<Integer,Integer> map = new HashMap<>();
+    private static Queue<Integer> queue = new LinkedList<>();
 
     public FirstUnique(int[] nums) {
         for (int num : nums)
         {
-            set.add(num);
+            add(num);
         }
     }
 
     public static int showFirstUnique() {
-        for (int num : set) {
-            return num;
+        while (!queue.isEmpty() && map.get(queue.peek()) >= 2) {
+            queue.poll();
         }
-        return -1;
+        if (queue.isEmpty()) {
+            return -1;
+        }
+        return queue.peek();
     }
 
     public static void add(int value) {
-        set.add(value);
+        map.put(value, map.getOrDefault(value,0)+1);
+        queue.add(value);
     }
 
     public static void main(String[] args)

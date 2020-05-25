@@ -3,28 +3,20 @@ package thirty_day_challenge.May;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Leetcode - #438
+ */
 public class FindAnagrams
 {
     public static List<Integer> findAnagrams(String s, String p) {
         List<Integer> list = new ArrayList<>();
-        int i=0;
-        while (i < s.length()) {
-            int len = p.length();
-            StringBuilder str = new StringBuilder();
-            for (int j=i; j < s.length() && len > 0; j++,len--) {
-                char ch = s.charAt(j);
-                if (p.indexOf(ch) != -1) {
-                    str.append(ch);
-                } else {
-                    break;
-                }
+        if (p.length() > s.length()) {
+            return list;
+        }
+        for (int i=0;i<=s.length()-p.length();i++) {
+            if (isAnagram(p,s.substring(i,i+p.length()))) {
+                list.add(i);
             }
-            if (str.length() == p.length()) {
-                if (isAnagram(p,str.toString())) {
-                    list.add(i);
-                }
-            }
-            i++;
         }
         return list;
     }
@@ -57,8 +49,8 @@ public class FindAnagrams
 
     public static void main(String[] args)
     {
-        String s = "abab";
-        String p = "ab";
+        String s = "cbaebabacd";
+        String p = "abc";
         System.out.println(findAnagrams(s,p));
     }
 }

@@ -1,3 +1,5 @@
+package LinkedList;
+
 public class DeleteNode {
     private static void deleteNode(ListNode node) {
         node.val = node.next.val;

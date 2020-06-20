@@ -1,3 +1,5 @@
+package LinkedList;
+
 public class MergeSortedLists {
     private static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if (l1 == null && l2 == null) {
